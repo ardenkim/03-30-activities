@@ -21,10 +21,19 @@ public class MyGUI extends JFrame {
 			}
 		});
 
+		JButton button2 = new JButton("No, click me!");
+		button2.addActionListener(new ActionListener() {	
+			//class body goes here
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("haha I win");
+			}
+		});
+
 
 		
 		this.add(theButton);	// adding button
-		
+		this.add(button2);
+
 		this.pack(); // optimize sizing
 		this.setVisible(true);		// please show up on the screen
 	}
@@ -47,4 +56,8 @@ public class MyGUI extends JFrame {
 
 	rather than declaring this class for ActionListener to use for just one line,
 	we can instead make it an anonymous variable
+
+	add another button but we haven't specified where it should appear
+	--> it top on the other
+		not like HTML, we have to specify
 */
