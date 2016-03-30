@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * A demo of GUI programming with Swing
  */
-public class MyGUI extends JFrame implement ActionListener {
+public class MyGUI extends JFrame implements ActionListener {
 	
 	public MyGUI() {
 		super("My GUI");
