@@ -30,10 +30,15 @@ public class MyGUI extends JFrame {
 			}
 		});
 
-		this.setLayout(new FlowLayout());
+		JPanel panel = new JPanel();
+		panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+
+		// this.setLayout(new FlowLayout());
 		
 		this.add(theButton);	// adding button
 		this.add(button2);
+
+		this.add(panel);
 
 		this.pack(); // optimize sizing
 		this.setVisible(true);		// please show up on the screen
@@ -62,4 +67,6 @@ public class MyGUI extends JFrame {
 	--> it top on the other
 		not like HTML, we have to specify
 		setLayout
+
+	????? copied boxLayout but nothing appears
 */
