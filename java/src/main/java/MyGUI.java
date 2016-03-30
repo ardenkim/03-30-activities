@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.event.*;
+import java.awt.*;
 import java.util.*;
 
 /**
@@ -29,7 +30,7 @@ public class MyGUI extends JFrame {
 			}
 		});
 
-
+		this.setLayout(new FlowLayout());
 		
 		this.add(theButton);	// adding button
 		this.add(button2);
@@ -60,4 +61,5 @@ public class MyGUI extends JFrame {
 	add another button but we haven't specified where it should appear
 	--> it top on the other
 		not like HTML, we have to specify
+		setLayout
 */
