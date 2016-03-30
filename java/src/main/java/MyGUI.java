@@ -13,10 +13,13 @@ public class MyGUI extends JFrame {
 		
 		JButton theButton = new JButton("Click me!");
 
-		// ActionListener listener = new ActionListener();	NO
-		ActionListener listener = new MyActionListener();
-
-		theButton.addActionListener(listener);
+		// when this button is pressed, do this code below
+		theButton.addActionListener(new ActionListener() {	
+			//class body goes here
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("You clicked me!");
+			}
+		});
 
 
 		
@@ -29,13 +32,6 @@ public class MyGUI extends JFrame {
 	public static void main(String[] args) {
 		new MyGUI(); //create the frame
 	}
-
-  	// nested class for ActionListener
- 	public static class MyActionListener implements ActionListener {
-		public void actionPerformed(ActionEvent e) {
-			System.out.println("You clicked me!");
-		}
- 	}
 }
 
 /*
@@ -48,4 +44,7 @@ public class MyGUI extends JFrame {
 	hard to understand if GUI itself is the listener
 	--> nested class!!
 		make a new class inside a class
+
+	rather than declaring this class for ActionListener to use for just one line,
+	we can instead make it an anonymous variable
 */
